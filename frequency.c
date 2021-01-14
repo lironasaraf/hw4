@@ -250,7 +250,7 @@ int main(int argc, char* argv[])
 	rootNode = createNode(NULL, '.');
 
 	// Read input string
-	printf("Enter string please:\n");
+	//printf("Enter string please:\n");
 	fgets(str, sizeof(str), stdin);
 
 
