@@ -266,7 +266,7 @@ int main(int argc, char* argv[])
 			// Printable letter add to word
 			word[index++] = letter;
 		}
-		else if (letter == ' ' || letter == '\n') // If end of word
+		else if (letter == ' ') // If end of word
 		{
 			// Add end of word
 			word[index++] = '\0';
