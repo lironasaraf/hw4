@@ -244,14 +244,19 @@ int main(int argc, char* argv[])
 	int i, index;
 	char str[MAX_STR_LEN];
 	char word[MAX_STR_LEN];
+	char temp[MAX_STR_LEN];
 
 
 	// Create root node with with NULL parent and letter (because the root has no parent and does not represent any specific letter)
 	rootNode = createNode(NULL, '.');
+	str[0]= '\0';
 
 	// Read input string
 	//printf("Enter string please:\n");
-	fgets(str, sizeof(str), stdin);
+	while (fgets(temp, sizeof(temp),stdin) != NULL)
+	{ 
+	strcat(str,temp);
+	}
 
 
 	// Cut input string to words
@@ -266,7 +271,7 @@ int main(int argc, char* argv[])
 			// Printable letter add to word
 			word[index++] = letter;
 		}
-		else if (letter == ' ') // If end of word
+		else if (letter == ' ' || letter == '\n') // If end of word
 		{
 			// Add end of word
 			word[index++] = '\0';
@@ -283,17 +288,19 @@ int main(int argc, char* argv[])
 	if ((argc > 1) && (strcmp(argv[1], "r") == 0))
 	{
 		// printf("\n\n===== Descending Order =====\n");
-		printf("\n");
+		//printf("\n");
 		printDescendingOrder();
 	}
 	else
 	{
 		// printf("\n\n===== Ascending Order =====\n");
-		printf("\n");
+		//printf("\n");
 		printAscendingOrder();
 	}
 
-	deleteTrie();
+	
 
+	
+	deleteTrie();
 	return 0;
 }
