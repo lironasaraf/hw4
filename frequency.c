@@ -120,7 +120,7 @@ void printAscendingOrder()
 				{
 					// Add end-of-string to our word and print it
 					word[wordIndex] = '\0';
-					printf("%s %d \n", word, child->count);
+					printf("%s %d\n", word, child->count);
 				}
 
 				// Continue with the child node
@@ -174,7 +174,7 @@ void printDescendingOrder()
 				{
 					// Add end-of-string to our word and print it
 					word[wordIndex] = '\0';
-					printf("%s %d \n", word, child->count);
+					printf("%s %d\n", word, child->count);
 				}
 
 				// Continue with the child node
